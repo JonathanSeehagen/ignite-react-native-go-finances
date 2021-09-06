@@ -71,7 +71,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         await AsyncStorage.setItem(userStorageKey, JSON.stringify(userLogged))
       }
     } catch (error) {
-      throw new Error(error);
+      throw new Error(error as any);
     }
   }
 
